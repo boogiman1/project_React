@@ -11,7 +11,7 @@ a{text-decoration: none;}
 #footer{height: 200px; background-color: #e4e4e4; display: flex; flex: 1 1 15%; justify-content: center; align-items: center;}
 #footer a{text-decoration: none; color: #333; padding: 20px;}
 #banner{height: 848px;}
-#banner a img{width: 100%;}
+#banner img{width: 100%;}
 
 #header-area{width: 1720px; height: 100%; display: flex; align-items: center;}
 #header-area > img{width: 128px;}

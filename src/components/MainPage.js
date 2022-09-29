@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import './MainPage.css';
 import axios from "axios";
 const Mainpage = () => {
@@ -28,19 +29,21 @@ const Mainpage = () => {
         <>
             <div id="header">
                 <div id="header-area">
-                    <h1><a href="javascript:;"><img src="images/icons/logo.png" alt="logo" /></a></h1>
+                    <Link to={'/'}>
+                        <h1><img src="images/icons/logo.png" alt="logo" /></h1>
+                    </Link>
                 </div>
             </div>
             <div id="body">
-                <div id="banner"><a href="javascript:;"><img src="images/banners/banner_spao.png" alt="배너사진" /></a></div>
+                <div id="banner"><img src="images/banners/banner_spao.png" alt="배너사진" /></div>
                 <section className="section">
                     <h2>What's NEW</h2>
-                    <a href="javascript:;">
-                        <div id="product-list">
-                            {products.map((product, idx) => {
-                                /* console.log(product, idx); */
-                                return (
-                                    <div className="product-card" key={idx}>
+                    <div id="product-list">
+                        {products.map((product, idx) => {
+                            /* console.log(product, idx); */
+                            return (
+                                <div className="product-card" key={idx}>
+                                    <Link to={""}>
                                         <div>
                                             <img className="product-img" src={product.imageUrl} alt={product.name} />
                                         </div>
@@ -52,20 +55,20 @@ const Mainpage = () => {
                                                 <span>{product.seller}</span>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </a>
+                                    </Link>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </section>
                 <section className="section">
                     <h2>Weekly Best</h2>
-                    <a href="javascript:;">
-                        <div id="product-list">
-                            {products2.map((product2, idx) => {
-                                /* console.log(product, idx); */
-                                return (
-                                    <div className="product-card" key={idx}>
+                    <div id="product-list">
+                        {products2.map((product2, idx) => {
+                            /* console.log(product, idx); */
+                            return (
+                                <div className="product-card" key={idx}>
+                                    <Link to={""}>
                                         <div>
                                             <img className="product-img" src={product2.imageUrl} alt={product2.name} />
                                         </div>
@@ -77,15 +80,19 @@ const Mainpage = () => {
                                                 <span>{product2.seller}</span>
                                             </div>
                                         </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </a>
+                                    </Link>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </section>
             </div>
             <div id="footer">
-                <a href="javascript:;">회사소개</a><a href="javascript:;">이용약관</a><a href="javascript:;">통신판매업:123-1234</a><a href="javascript:;">사업자등록번호 : 456-4567</a><a href="javascript:;">개인정보...</a>
+                <Link to={'/'}>회사소개 </Link>
+                <Link to={'/'}>이용약관 </Link>
+                <Link to={'/'}>통신판매업:123-1234 </Link>
+                <Link to={'/'}>사업자등록번호 : 456-4567 </Link>
+                <Link to={'/'}>개인정보... </Link>
             </div>
         </>
     )

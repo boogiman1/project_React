@@ -1,9 +1,12 @@
 import Mainpage from './components/MainPage';
-import React, {ReactFragment} from "react";
+import { Routes, Route } from "react-router-dom";
+// import React, {ReactFragment} from "react";
 
 const App = () =>{return(
     <>
-      <Mainpage />
+      <Routes>
+        <Route path='/' element={<Mainpage />}></Route>
+      </Routes>
     </>
   )}
 
